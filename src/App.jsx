@@ -22,7 +22,7 @@ function App() {
 
       <MovieSection saga="Marvel"  title="Trending Now" />
       <MovieSection saga="godfather"  title="Trending Now" />
-      <MovieSection saga="gomorra"  title="Trending Now" />
+      <MovieSection saga="wars"  title="Trending Now" />
 
       <Footer />
     </>

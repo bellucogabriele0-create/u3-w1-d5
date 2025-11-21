@@ -12,7 +12,7 @@ class MovieSection extends Component {
       .then((data) => {
         if (data.Response === "True") {
           const movieItems = data.Search
-            .filter((item) => item.Type === "movie")
+            .filter((item) => item.Type === "movie" )
             .slice(0, 5)
           this.setState({ movies: movieItems })
         }

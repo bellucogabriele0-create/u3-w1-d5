@@ -12,11 +12,10 @@ const MyNavbar = function ({
     { label: "My List", href: "#" },
   ],
 }) {
-  const [expanded, setExpanded] = useState(false)
+  const [setExpanded] = useState(false)
 
   return (
     <Navbar
-      expanded={expanded}
       expand="lg"
       variant="dark"
       bg="dark"
