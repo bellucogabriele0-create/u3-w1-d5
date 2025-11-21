@@ -1,8 +1,7 @@
 import React, { useState } from "react"
 import { Navbar, Nav, Container } from "react-bootstrap"
 
-
-export default function AppNavbar({
+const MyNavbar = function ({
   brand = "",
   logoSrc = "assets/logo.png",
   links = [
@@ -18,32 +17,29 @@ export default function AppNavbar({
   return (
     <Navbar
       expanded={expanded}
-      onToggle={(val) => setExpanded(val)}
       expand="lg"
       variant="dark"
       bg="dark"
-      style={{ backgroundColor: "#221f1f" }}
-      className="py-2"
+      className="w-100"
     >
-      <Container fluid>
-        <Navbar.Brand href="#" className="d-flex align-items-center">
+      <Container >
+        <Navbar.Brand href="#">
           <img
             src={logoSrc}
             alt={brand || "logo"}
-            style={{ width: 100, height: 55, objectFit: "cover" }}
+            style={{ width: 100, height: 50, }}
           />
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="navbarSupportedContent" />
 
         <Navbar.Collapse id="navbarSupportedContent">
-          <Nav className="me-auto mb-2 mb-lg-0">
+          <Nav className="me-auto mb-2">
             {links.map((l, idx) => (
               <Nav.Link
                 key={idx}
                 href={l.href}
                 active={!!l.active}
-                className="fw-bold"
                 onClick={() => setExpanded(false)}
               >
                 {l.label}
@@ -52,29 +48,14 @@ export default function AppNavbar({
           </Nav>
 
           <div className="d-flex align-items-center gap-3">
-            <i
-              className="bi bi-search icons"
-              role="button"
-              aria-label="Cerca"
-            />
-
-            <div id="kids" className="fw-bold text-white">
-              KIDS
-            </div>
-
-            <i
-              className="bi bi-bell icons"
-              role="button"
-              aria-label="Notifiche"
-            />
-            <i
-              className="bi bi-person-circle icons"
-              role="button"
-              aria-label="Profilo"
-            />
+            <i className="bi bi-search icons" role="button" aria-label="Cerca" />
+            <div id="kids" className="fw-bold text-white">KIDS</div>
+            <i className="bi bi-bell icons" role="button" aria-label="Notifiche" />
+            <i className="bi bi-person-circle icons" role="button" aria-label="Profilo" />
           </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   )
 }
+export default MyNavbar

@@ -1,13 +1,13 @@
-import React from "react"
-import { Container, Row, Col, Button } from "react-bootstrap"
+import React from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
-export default function Footer() {
+function Footer() {
   const columns = [
     ["Audio and Subtitles", "Media Center", "Privacy", "Contact us"],
     ["Audio Description", "Investor Relations", "Legal Notices"],
     ["Help Center", "Jobs", "Cookie Preferences"],
     ["Gift Cards", "Terms of Use", "Corporate Information"],
-  ]
+  ];
 
   return (
     <footer className="text-white mt-5">
@@ -30,7 +30,6 @@ export default function Footer() {
                     <p key={item}>
                       <a
                         href="#"
-                        alt="footer link"
                         className="text-white-50 text-decoration-none"
                       >
                         {item}
@@ -45,7 +44,7 @@ export default function Footer() {
               <Col>
                 <Button
                   size="sm"
-                  className="footer-button rounded-0 mt-3"
+                  className=" mt-3"
                   variant="secondary"
                 >
                   Service Code
@@ -62,5 +61,7 @@ export default function Footer() {
         </Row>
       </Container>
     </footer>
-  )
+  );
 }
+
+export default Footer;

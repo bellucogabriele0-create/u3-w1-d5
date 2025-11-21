@@ -1,28 +1,31 @@
-
 import './App.css'
 import React from 'react'
-import { Component } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-icons/font/bootstrap-icons.css"
-import Navbar from "./components/Navbar"
+import MyNavbar from "./components/MyNavbar"
 import MovieSection from "./components/MovieSection"
 import Footer from './components/footer'
 
 function App() {
-
   return (
     <>
-<Navbar
+      <MyNavbar
         logoSrc="assets/logo.png"
         links={[
           { label: "Home", href: "#home", active: true },
-          { label: "About", href: "#about" },
-          { label: "Services", href: "#services" },
-          { label: "Contact", href: "#contact" },
+          { label: "TV Shows", href: "#tvshows" },
+          { label: "Movies", href: "#movies" },
+          { label: "Recently Added", href: "#recent" },
+          { label: "My List", href: "#list" },
         ]}
       />
-      <MovieSection />
-      <Footer />    </>
+
+      <MovieSection saga="Marvel"  title="Trending Now" />
+      <MovieSection saga="godfather"  title="Trending Now" />
+      <MovieSection saga="gomorra"  title="Trending Now" />
+
+      <Footer />
+    </>
   )
 }
 
